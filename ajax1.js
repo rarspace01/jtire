@@ -126,7 +126,7 @@ targetObj.innerHTML = "";
 
 	aListAvailCHK=new Array();
 
-	alert($dom.text());
+	//alert($dom.text());
 	
 	targetObj.innerHTML = "";
 
@@ -138,6 +138,11 @@ targetObj.innerHTML = "";
 	
 	$dom.find('DataLine').each(function() {
 
+
+		//does rim contain ABE tire?
+
+		
+	
 		targetObj.innerHTML = targetObj.innerHTML +"<div id='idrim'>";
 
 		//add id to check
@@ -161,11 +166,13 @@ targetObj.innerHTML = "";
 		
 		});
 		
-		
 		targetObj.innerHTML = targetObj.innerHTML +"<br/></div>";
 
+		
+		
 	});
 
+	
 	targetObj.innerHTML = targetObj.innerHTML +"</div>";
 
 	lastRHTML=targetObj.innerHTML;
@@ -394,25 +401,25 @@ function ajax_showContent(divId,ajaxIndex,url,mode,callbackOnComplete)
 		
 		$(this).find('Tyre20').each(function() {
 		if($(this).text().length>0){
-		targetObj.innerHTML = targetObj.innerHTML+"<div id='idtyre20'>Vorne: "+getTiresHTML($(this).text())+"</div>";
+		targetObj.innerHTML = targetObj.innerHTML+"<div id='idtyre20'>Vorne: "+getTiresHTMLSAP($(this).text())+"</div>";
 		}
 		});
 	
 		$(this).find('Tyre21').each(function() {
 		if($(this).text().length>0){
-		targetObj.innerHTML = targetObj.innerHTML+"<div id='idtyre21'>Mitte/Hinten: "+getTiresHTML($(this).text())+"</div>";
+		targetObj.innerHTML = targetObj.innerHTML+"<div id='idtyre21'>Mitte/Hinten: "+getTiresHTMLSAP($(this).text())+"</div>";
 		}
 		});
 	
 		$(this).find('Tyre22').each(function() {
 		if($(this).text().length>0){
-		targetObj.innerHTML = targetObj.innerHTML+"<div id='idtyre22'>Od. Vorne: "+getTiresHTML($(this).text())+"</div>";
+		targetObj.innerHTML = targetObj.innerHTML+"<div id='idtyre22'>Od. Vorne: "+getTiresHTMLSAP($(this).text())+"</div>";
 		}
 		});
 	
 		$(this).find('Tyre23').each(function() {
 		if($(this).text().length>0){
-		targetObj.innerHTML = targetObj.innerHTML+"<div id='idtyre23'>Mitte/Hinten: "+getTiresHTML($(this).text())+"</div>";
+		targetObj.innerHTML = targetObj.innerHTML+"<div id='idtyre23'>Mitte/Hinten: "+getTiresHTMLSAP($(this).text())+"</div>";
 		}
 		});
 	
@@ -423,7 +430,7 @@ function ajax_showContent(divId,ajaxIndex,url,mode,callbackOnComplete)
 		var tmpsPuffer=$(this).text();
 		
 		tmpsPuffer=tmpsPuffer;
-		tmpsPuffer=getTiresHTML(tmpsPuffer);
+		tmpsPuffer=getTiresHTMLSAP(tmpsPuffer);
 		
 		targetObj.innerHTML = targetObj.innerHTML+"<div id='idCOC'>COC: ["+tmpsPuffer+"]</div>";
 		}
