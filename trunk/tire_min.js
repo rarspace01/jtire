@@ -1,0 +1,10 @@
+/*!
+ * Tire JS Library v0.2
+ * 
+ * Author: Denis Hamann
+ * Based on 'Johannes Schlick's code
+ * optimised for car tire detection
+ * Licensed under the GPL Version 2 license
+ * 
+ */
+function getTires(c){sPuffer=c;sfSpace=" ";if(sPuffer.length<5){sPuffer=""}else{var b=/(P|LT|T)?(\d{2}x)?([1-9][1234567890\.,]{1,4}\s?)[\/|\s]?([1234567890\.,]{2,5})?\s*([BDFHRVZ-]{1,2}(?=[1-9]))\s*([1-9][1234567890\.,]{1,4})\s*(LT|CP|C?)\s*(\d{1,2}\s?PR)?\s*(M\/C)?\s*(XL|EL|Reinf|rf\.|RF)?\s*((\()?(\d{2,3})?\/?(\d{2,3})\s*(A[0-8]?|[BCDEFGJKLMNPQRSTUHVWY])(\))?)?/gi;var a=new RegExp(b);sPuffer=sPuffer.match(a)}return sPuffer}function getTiresHTML(c){sPuffer=c;srPuffer=c;sfSpace=" ";if(sPuffer.length<5){sPuffer=""}else{var b=/(P|LT|T)?(\d{2}x)?([1-9][1234567890\.,]{1,4}\s?)[\/|\s]?([1234567890\.,]{2,5})?\s*([BDFHRVZ-]{1,2}(?=[1-9]))\s*([1-9][1234567890\.,]{1,4})\s*(LT|CP|C?)\s*(\d{1,2}\s?PR)?\s*(M\/C)?\s*(XL|EL|Reinf|rf\.|RF)?\s*((\()?(\d{2,3})?\/?(\d{2,3})\s*(A[0-8]?|[BCDEFGJKLMNPQRSTUHVWY])(\))?)?/gi;var a=new RegExp(b);try{for(var d=0;d<sPuffer.match(a).length;d++){srPuffer=srPuffer.replace(new RegExp(sPuffer.match(a)[d],"gi"),"<a href='#'>"+sPuffer.match(a)[d]+"</a>")}}catch(f){srPuffer=c}}return srPuffer}function getTiresHTMLSAP(c){sPuffer=c;srPuffer=c;sfSpace=" ";if(sPuffer.length<5){sPuffer=""}else{var b=/(P|LT|T)?(\d{2}x)?([1-9][1234567890\.,]{1,4}\s?)[\/|\s]?([1234567890\.,]{2,5})?\s*([BDFHRVZ-]{1,2}(?=[1-9]))\s*([1-9][1234567890\.,]{1,4})\s*(LT|CP|C?)\s*(\d{1,2}\s?PR)?\s*(M\/C)?\s*(XL|EL|Reinf|rf\.|RF)?\s*((\()?(\d{2,3})?\/?(\d{2,3})\s*(A[0-8]?|[BCDEFGJKLMNPQRSTUHVWY])(\))?)?/gi;var a=new RegExp(b);try{for(var d=0;d<sPuffer.match(a).length;d++){srPuffer=srPuffer.replace(new RegExp(sPuffer.match(a)[d],"gi"),"<a href='SAPEVENT:TYRE_SIZE_"+sPuffer.match(a)[d]+"'>"+sPuffer.match(a)[d]+"</a>")}}catch(f){srPuffer=c}}return srPuffer};
