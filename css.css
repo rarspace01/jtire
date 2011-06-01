@@ -1,0 +1,192 @@
+﻿body {
+    font-family: Arial,Helvetica,Sans-Serif;
+    font-size: 13px;
+    letter-spacing: 0.2px;
+    line-height: 1.3;
+}
+
+#idcontent{
+background-color:#f1f1f1;
+}
+
+#idfcontent{
+background-color:#f1f1f1;
+}
+
+#idfgztxt{
+  position:absolute;
+  top:82px;
+   left:25px;
+}
+
+#idBrandText{
+  position:absolute;
+  top:102px;
+   left:25px;
+}
+
+#idMod{
+  position:absolute;
+  top:102px;
+   left:360px;
+}
+
+#idType{
+  position:absolute;
+  top:142px;
+   left:590px;
+}
+
+#idPower{
+  position:absolute;
+  top:122px;
+  left:25px;
+}
+
+#idDisplacement{
+  position:absolute;
+  top:122px;
+  left:360px;
+}
+
+#idhsntsn {
+  position:absolute;
+  top:142px;
+   left:25px;
+}
+
+#idModDate{
+  position:absolute;
+  top:142px;
+  left:360px;
+}
+
+#idmtype{
+  position:absolute;
+  top:162px;
+  left:25px;
+}
+
+#idvar{
+  position:absolute;
+  top:162px;
+  left:360px;
+}
+
+#idTopSpeed{
+  position:absolute;
+  top:162px;
+  left:560px;
+}
+
+#idDimensions{
+  position:absolute;
+  top:182px;
+  left:25px;
+}
+
+#idDrivingAxle{
+  position:absolute;
+  top:182px;
+  left:360px;
+}
+
+#idFrontAxleLoad{
+  position:absolute;
+  top:202px;
+  left:25px;
+}
+
+#idRearAxleLoad{
+  position:absolute;
+  top:202px;
+  left:360px;
+}
+
+#idtyres{
+  position:absolute;
+  top:242px;
+  left:25px;
+}
+
+#idtyre20{
+  position:absolute;
+  top:262px;
+  left:25px;
+}
+
+#idtyre21{
+  position:absolute;
+  top:262px;
+  left:360px;
+}
+
+#idtyre22{
+  position:absolute;
+  top:282px;
+  left:25px;
+}
+
+#idtyre23{
+  position:absolute;
+  top:282px;
+  left:360px;
+}
+
+#idCOC{
+  position:absolute;
+  top:322px;
+  left:25px;
+}
+
+ul.tabs {
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	height: 32px; /*--Set height of tabs--*/
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	width: 100%;
+}
+ul.tabs li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 31px; /*--Subtract 1px from the height of the unordered list--*/
+	line-height: 31px; /*--Vertically aligns the text within the tab--*/
+	border: 1px solid #999;
+	border-left: none;
+	margin-bottom: -1px; /*--Pull the list item down 1px--*/
+	overflow: hidden;
+	position: relative;
+	background: #e0e0e0;
+}
+ul.tabs li a {
+	text-decoration: none;
+	color: #000;
+	display: block;
+	//font-size: 1.2em;
+	padding: 0 20px;
+	border: 1px solid #fff; /*--Gives the bevel look with a 1px white border inside the list item--*/
+	outline: none;
+}
+ul.tabs li a:hover {
+	background: #ccc;
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that the active tab does not listen to the hover properties--*/
+	background: #fff;
+	border-bottom: 1px solid #fff; /*--Makes the active tab look like it's connected with its content--*/
+}
+.tab_container {
+	border: 1px solid #999;
+	border-top: none;
+	overflow: hidden;
+	clear: both;
+	float: left; width: 100%;
+	background: #fff;
+}
+.tab_content {
+	padding: 20px;
+	font-size: 1.2em;
+}

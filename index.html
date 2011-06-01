@@ -1,0 +1,121 @@
+﻿<html>
+
+<head>
+
+<script type="text/javascript" src="ajax1.js"></script>
+<script type="text/javascript" src="ajax2.js"></script>
+<script type="text/javascript" src="jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="jquery.xmldom.min.js"></script>
+<script type="text/javascript" src="tire-0.1.js"></script>
+<script type="text/javascript" src="hsntsn.js"></script>
+<!-- <script type="text/javascript" src="jq_a.min.js"></script> -->
+
+<link href="out.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+
+
+</head>
+
+<body>
+
+<ul class="tabs">
+    <li><a href="#tabhsntsn">Reifen - HSNTSN</a></li>
+    <li><a href="#tabfz" onclick='loadHSNS()'>Reifen - Auswahl</a></li>
+	<li><a href="#tabsteelrims" onclick='checkHTfilled()'>Stahlfelgen  - HSNTSN</a></li>
+	<li><a href="#tabsalloyrims" onclick='checkHTfilled()'>Alufelgen  - HSNTSN</a></li>
+</ul>
+
+<div class="tab_container">
+    <div id="tabhsntsn" class="tab_content">
+        
+						<form action="#" name="HSNTSNF">
+
+						HSN: <input type="text" name="HSN"  size=4 maxlength=4/>
+						TSN: <input type="text" name="TSN" maxlength=10/>
+
+						<input type="submit" onclick="return getHSNData()" value="Abfrage">
+
+						</form>
+
+						<div class="idContent" id="idContent"></div>
+		
+    </div>
+    <div id="tabfz" class="tab_content">
+       <!--Content-->
+	   
+	   					<form action="#" name="HSNTSNSF">
+
+						Hersteller:<select name='idHSNS' id='idHSNS' onclick='loadMSNS()'></select>
+						Typ:<select name='idMSNS' id='idMSNS' onclick='loadMODS()'></select>
+						Model:<select name='idMODS' id='idMODS' onclick='loadDET()'></select>
+						
+						<!--<input type="submit" onclick="return getData()" value="Abfrage">-->
+						</form>
+						<div class="idFContent" id="idFContent"></div>
+    </div>
+	<div id="tabsteelrims" class="tab_content">
+       <!--Content-->
+	   
+		<form action="#tabsteelrims" name="HSNTSNR">
+
+		HSN: <input type="text" name="HSN"  size=4 maxlength=4/>
+		TSN: <input type="text" name="TSN" maxlength=10/>
+
+		<input type="submit" onclick="return getHSNSRData()" value="Abfrage">
+		<input type="submit" onclick="return chkAvail()" value="Verfügbarkeit">
+
+		</form>
+	   
+		
+		<div class="idSRContent" id="idSRContent"></div>
+		
+    </div>
+	<div id="tabsalloyrims" class="tab_content">
+       <!--Content-->
+	   
+		<form action="#taballoyrims" name="HSNTSNAR">
+
+		HSN: <input type="text" name="HSN"  size=4 maxlength=4/>
+		TSN: <input type="text" name="TSN" maxlength=10/>
+
+		<input type="submit" onclick="return getHSNSARData()" value="Abfrage">
+		<input type="submit" onclick="return chkAvail()" value="Verfügbarkeit">
+
+		</form>
+	   
+		
+		<div class="idSARContent" id="idSARContent"></div>
+		
+    </div>
+</div>
+
+<script type="text/javascript">
+
+var svars=getUrlVars();
+if(svars.length>1){
+
+
+if('HSN' in svars){document.forms["HSNTSNF"]["HSN"].value=svars['HSN'];document.forms["HSNTSNR"]["HSN"].value=svars['HSN'];document.forms["HSNTSNAR"]["HSN"].value=svars['HSN'];}
+if('TSN' in svars){document.forms["HSNTSNF"]["TSN"].value=svars['TSN'];document.forms["HSNTSNR"]["TSN"].value=svars['TSN'];document.forms["HSNTSNAR"]["TSN"].value=svars['TSN'];}
+
+if('HSN' in svars&&'TSN' in svars)
+{
+getHSNData();
+}else{
+
+printSelection();
+
+}
+
+}
+
+
+</script>
+
+</body>
+
+</html>
