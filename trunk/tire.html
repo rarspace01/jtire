@@ -1,0 +1,31 @@
+﻿<html>
+
+<head>
+</head>
+
+<body>
+<script type="text/javascript" src="tire-0.1.js"></script>
+
+
+<form action="#" name='tiref'>
+
+<input type="text" name="dim"  />
+<input type="submit" onclick="return printTire()" value="Abfrage">
+
+</form>
+
+<script type="text/javascript">
+function printTire(){
+
+alert(getTire(document.forms["tiref"]["dim"].value));
+
+return false;
+}
+
+</script>
+
+
+</body>
+
+
+</html>
